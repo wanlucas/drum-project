@@ -95,7 +95,7 @@ class _RudimentTile extends StatelessWidget {
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      rudiment.shortDescription,
+                      'Categoria: ${rudiment.category}',
                       style: theme.textTheme.bodyMedium,
                     ),
                     const SizedBox(height: 10),

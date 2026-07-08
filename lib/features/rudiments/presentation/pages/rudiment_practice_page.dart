@@ -24,6 +24,11 @@ class RudimentPracticePage extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             Text(
+              'Categoria: ${rudiment.category}',
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+            const SizedBox(height: 12),
+            Text(
               'Aqui depois vamos colocar o play/pause, o metrônomo e o cronômetro de prática.',
               style: Theme.of(context).textTheme.bodyMedium,
             ),
