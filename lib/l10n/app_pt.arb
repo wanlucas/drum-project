@@ -11,5 +11,15 @@
     }
   },
   "categoryLabel": "Categoria",
-  "practicePlaceholder": "Aqui depois vamos colocar o play/pause, o metrônomo e o cronômetro de prática."
+  "practiceTimeLabel": "Tempo de pratica",
+  "practiceReady": "Pronto para praticar",
+  "practiceRunning": "Praticando agora",
+  "practicePaused": "Pratica pausada",
+  "startPractice": "Iniciar",
+  "pausePractice": "Pausar",
+  "resetPractice": "Zerar",
+  "rudimentPatternTitle": "Sequência",
+  "rudimentPatternUnavailable": "Sequência ainda não cadastrada para este rudimento.",
+  "bpmLabel": "BPM",
+  "timelinePreviewTitle": "Eventos calculados"
 }

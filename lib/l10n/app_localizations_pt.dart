@@ -23,6 +23,36 @@ class AppLocalizationsPt extends AppLocalizations {
   String get categoryLabel => 'Categoria';
 
   @override
-  String get practicePlaceholder =>
-      'Aqui depois vamos colocar o play/pause, o metrônomo e o cronômetro de prática.';
+  String get practiceTimeLabel => 'Tempo de pratica';
+
+  @override
+  String get practiceReady => 'Pronto para praticar';
+
+  @override
+  String get practiceRunning => 'Praticando agora';
+
+  @override
+  String get practicePaused => 'Pratica pausada';
+
+  @override
+  String get startPractice => 'Iniciar';
+
+  @override
+  String get pausePractice => 'Pausar';
+
+  @override
+  String get resetPractice => 'Zerar';
+
+  @override
+  String get rudimentPatternTitle => 'Sequência';
+
+  @override
+  String get rudimentPatternUnavailable =>
+      'Sequência ainda não cadastrada para este rudimento.';
+
+  @override
+  String get bpmLabel => 'BPM';
+
+  @override
+  String get timelinePreviewTitle => 'Eventos calculados';
 }

@@ -118,11 +118,71 @@ abstract class AppLocalizations {
   /// **'Categoria'**
   String get categoryLabel;
 
-  /// No description provided for @practicePlaceholder.
+  /// No description provided for @practiceTimeLabel.
   ///
   /// In pt, this message translates to:
-  /// **'Aqui depois vamos colocar o play/pause, o metrônomo e o cronômetro de prática.'**
-  String get practicePlaceholder;
+  /// **'Tempo de pratica'**
+  String get practiceTimeLabel;
+
+  /// No description provided for @practiceReady.
+  ///
+  /// In pt, this message translates to:
+  /// **'Pronto para praticar'**
+  String get practiceReady;
+
+  /// No description provided for @practiceRunning.
+  ///
+  /// In pt, this message translates to:
+  /// **'Praticando agora'**
+  String get practiceRunning;
+
+  /// No description provided for @practicePaused.
+  ///
+  /// In pt, this message translates to:
+  /// **'Pratica pausada'**
+  String get practicePaused;
+
+  /// No description provided for @startPractice.
+  ///
+  /// In pt, this message translates to:
+  /// **'Iniciar'**
+  String get startPractice;
+
+  /// No description provided for @pausePractice.
+  ///
+  /// In pt, this message translates to:
+  /// **'Pausar'**
+  String get pausePractice;
+
+  /// No description provided for @resetPractice.
+  ///
+  /// In pt, this message translates to:
+  /// **'Zerar'**
+  String get resetPractice;
+
+  /// No description provided for @rudimentPatternTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Sequência'**
+  String get rudimentPatternTitle;
+
+  /// No description provided for @rudimentPatternUnavailable.
+  ///
+  /// In pt, this message translates to:
+  /// **'Sequência ainda não cadastrada para este rudimento.'**
+  String get rudimentPatternUnavailable;
+
+  /// No description provided for @bpmLabel.
+  ///
+  /// In pt, this message translates to:
+  /// **'BPM'**
+  String get bpmLabel;
+
+  /// No description provided for @timelinePreviewTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Eventos calculados'**
+  String get timelinePreviewTitle;
 }
 
 class _AppLocalizationsDelegate

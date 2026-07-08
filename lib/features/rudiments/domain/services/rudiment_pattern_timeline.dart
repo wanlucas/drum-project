@@ -58,6 +58,20 @@ class RudimentPatternTimeline {
     );
   }
 
+  static Duration cyclePosition({
+    required RudimentPattern pattern,
+    required int bpm,
+    required Duration elapsed,
+  }) {
+    assert(bpm > 0);
+
+    final duration = cycleDuration(pattern: pattern, bpm: bpm);
+    final normalizedMicroseconds =
+        elapsed.inMicroseconds % duration.inMicroseconds;
+
+    return Duration(microseconds: normalizedMicroseconds);
+  }
+
   static Duration durationForTicks({
     required int ticks,
     required int ticksPerQuarter,
