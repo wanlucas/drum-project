@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:app/l10n/app_localizations.dart';
+import 'package:app/shared/widgets/app_badge.dart';
 
 import '../../domain/entities/rudiment.dart';
 import '../../domain/rudiment_catalog.dart';
@@ -9,11 +11,12 @@ class RudimentsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
     final rudiments = RudimentCatalog.all;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Rudimentos'),
+        title: Text(l.rudimentsTitle),
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 16),
@@ -69,9 +72,9 @@ class _RudimentTile extends StatelessWidget {
                 width: 44,
                 height: 44,
                 decoration: BoxDecoration(
-                  color: theme.colorScheme.primary.withOpacity(0.15),
+                  color: theme.colorScheme.primary.withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(14),
-                  border: Border.all(color: theme.colorScheme.primary.withOpacity(0.25)),
+                  border: Border.all(color: theme.colorScheme.primary.withValues(alpha: 0.25)),
                 ),
                 alignment: Alignment.center,
                 child: Text(
@@ -95,7 +98,7 @@ class _RudimentTile extends StatelessWidget {
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      'Categoria: ${rudiment.category}',
+                      rudiment.description,
                       style: theme.textTheme.bodyMedium,
                     ),
                     const SizedBox(height: 10),
@@ -103,8 +106,7 @@ class _RudimentTile extends StatelessWidget {
                       spacing: 8,
                       runSpacing: 8,
                       children: [
-                        _Tag(label: rudiment.category),
-                        _Tag(label: 'Rudiment ${rudiment.number}'),
+                        AppBadge(label: rudiment.category),
                       ],
                     ),
                   ],
@@ -117,33 +119,6 @@ class _RudimentTile extends StatelessWidget {
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class _Tag extends StatelessWidget {
-  const _Tag({required this.label});
-
-  final String label;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-      decoration: BoxDecoration(
-        color: theme.colorScheme.surfaceVariant.withOpacity(0.5),
-        borderRadius: BorderRadius.circular(999),
-        border: Border.all(color: theme.colorScheme.outline.withOpacity(0.4)),
-      ),
-      child: Text(
-        label,
-        style: theme.textTheme.labelSmall?.copyWith(
-          color: theme.colorScheme.onSurfaceVariant,
-          fontWeight: FontWeight.w600,
         ),
       ),
     );

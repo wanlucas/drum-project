@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:app/l10n/app_localizations.dart';
 
 import '../../domain/entities/rudiment.dart';
 
@@ -9,6 +10,8 @@ class RudimentPracticePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(rudiment.name),
@@ -19,17 +22,22 @@ class RudimentPracticePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Prática do rudimento ${rudiment.number}',
+              l.practiceRudimentTitle(rudiment.number),
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             const SizedBox(height: 12),
             Text(
-              'Categoria: ${rudiment.category}',
+              '${l.categoryLabel}: ${rudiment.category}',
               style: Theme.of(context).textTheme.bodyMedium,
             ),
             const SizedBox(height: 12),
             Text(
-              'Aqui depois vamos colocar o play/pause, o metrônomo e o cronômetro de prática.',
+              rudiment.description,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+            const SizedBox(height: 20),
+            Text(
+              l.practicePlaceholder,
               style: Theme.of(context).textTheme.bodyMedium,
             ),
           ],

@@ -1,0 +1,15 @@
+{
+  "@@locale": "pt",
+  "appTitle": "Projeto de Bateria",
+  "rudimentsTitle": "Rudimentos",
+  "practiceRudimentTitle": "Prática do rudimento {number}",
+  "@practiceRudimentTitle": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "categoryLabel": "Categoria",
+  "practicePlaceholder": "Aqui depois vamos colocar o play/pause, o metrônomo e o cronômetro de prática."
+}
