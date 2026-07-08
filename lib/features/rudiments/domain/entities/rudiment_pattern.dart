@@ -66,8 +66,7 @@ class StrokeGroup {
   const StrokeGroup({
     required this.tick,
     required this.notes,
-  })  : assert(tick >= 0),
-        assert(notes.length > 0);
+  }) : assert(tick >= 0);
 
   final int tick;
   final List<StrokeNote> notes;
