@@ -1,4 +1,5 @@
 import 'entities/rudiment.dart';
+import 'rudiment_patterns.dart';
 
 class RudimentCatalog {
   RudimentCatalog._();
@@ -9,6 +10,7 @@ class RudimentCatalog {
       name: 'Single Stroke Roll',
       description: 'Toques simples alternados entre as mãos.',
       category: 'Roll',
+      pattern: RudimentPatterns.singleStrokeRoll,
     ),
     Rudiment(
       number: 2,
@@ -123,6 +125,7 @@ class RudimentCatalog {
       name: 'Flam',
       description: 'Nota de apoio seguida do ataque principal.',
       category: 'Flam',
+      pattern: RudimentPatterns.flam,
     ),
     Rudiment(
       number: 21,
@@ -189,6 +192,7 @@ class RudimentCatalog {
       name: 'Drag',
       description: 'Grace notes seguidas de um ataque principal.',
       category: 'Drag',
+      pattern: RudimentPatterns.drag,
     ),
     Rudiment(
       number: 32,
